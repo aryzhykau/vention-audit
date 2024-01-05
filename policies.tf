@@ -60,6 +60,26 @@ data "aws_iam_policy_document" "vpc" {  statement {
 "ec2:DescribeAdrdreses",
 "ec2:DescribeAddressesAttribute",
 "ec2:DescribeAwsNetworkPerformanceMetricSubscriptions",
+"ec2:DescribeClientVpnAuthorizationRules",
+"ec2:DescribeClientVpnConnections",
+"ec2:DescribeClientVpnEndpoints",
+"ec2:DescribeClientVpnRoutes",
+"ec2:DescribeClientVpnTargetNetworks",
+"ec2:DescribeCoipPools",
+"ec2:DescribeCustomerGateways",
+"ec2:DescribeDhcpOptions",
+"ec2:DescribeEgressOnlylnternetGateways",
+"ec2:DescribeFlowLogs",
+"ec2:DescribelnternetGateways",
+"ec2:Describelpv6Pools",
+"ec2:DescribeLocalGatewayRouteTablePermissions",
+"ec2:DescribelLocalGatewayRouteTableVirtualInterfaceGroupAssociations",
+"ec2:DescrbeLocalGatewayRouteTableVpcAssociations",
+"ec2:DescribeLocalGatewayRouteTables",
+"ec2:DescribelLocalGatewayVirtualInterfaceGroups",
+"ec2:DescribelLocalGatewayVirtualInterfaces",
+"ec2:DescribeLocalGateways",
+
 
     ]
     resources = ["arn:aws:ec2:*"]
