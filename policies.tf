@@ -83,6 +83,11 @@ data "aws_iam_policy_document" "vpc" {
       "ec2:DescribelLocalGatewayVirtualInterfaceGroups",
       "ec2:DescribelLocalGatewayVirtualInterfaces",
       "ec2:DescribeLocalGateways",
+"ec2:DescribeVpcAttribute",
+"ec2:DescribeVpsClassicLink",
+"ec2:DescribeVpcClassicLinkDnsSupport",
+"ec2:DescribeVpsEndpointConnectionNotifications",
+
 
 
     ]
