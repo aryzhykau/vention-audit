@@ -41,9 +41,30 @@ data "aws_iam_policy_document" "ecs" {
   }
 }
 
-data "aws_iam_policy_document" "iam" {}
+data "aws_iam_policy_document" "iam" {  statement {
+    sid = "RDSReadAccess"
+    actions = [
+      "iam:Get*",
+"iam:List*"
+    ]
+    resources = ["arn:aws:iam:*"]
+    effect = "Allow"
+  }}
 
-data "aws_iam_policy_document" "vpc" {}
+data "aws_iam_policy_document" "vpc" {  statement {
+    sid = "RDSReadAccess"
+    actions = [ "ec2:Get",
+"ec2:List",
+      "ec2:DescribeAvailbilityZones",
+"ec2:DescribeAdressTransfers",
+"ec2:DescribeAdrdreses",
+"ec2:DescribeAddressesAttribute",
+"ec2:DescribeAwsNetworkPerformanceMetricSubscriptions",
+
+    ]
+    resources = ["arn:aws:ec2:*"]
+    effect = "Allow"
+  }}
 
 data "aws_iam_policy_document" "cloudwatch" {}
 
@@ -59,10 +80,35 @@ data "aws_iam_policy_document" "cloudformation" {}
 
 data "aws_iam_policy_document" "apigateway" {}
 
-data "aws_iam_policy_document" "sqs" {}
+data "aws_iam_policy_document" "sqs" {  statement {
+    sid = "RDSReadAccess"
+    actions = [
+      "sqs:Get*",
+"sqs:List*
+    ]
+    resources = ["arn:aws:sqs:*"]
+    effect = "Allow"
+  }}
 
-data "aws_iam_policy_document" "sns" {}
+data "aws_iam_policy_document" "sns" {  statement {
+    sid = "RDSReadAccess"
+    actions = [
+      "sns:Get*", 
+"sns:List*
+    ]
+    resources = ["arn:aws:sns:*"]
+    effect = "Allow"
+  }}
 
-data "aws_iam_policy_document" "ses" {}
+data "aws_iam_policy_document" "ses" {  statement {
+    sid = "RDSReadAccess"
+    actions = [
+      "ses:Describe*", 
+"ses:Get*",
+"ses:List*"
+    ]
+    resources = ["arn:aws:ses:*"]
+    effect = "Allow"
+  }}
 
 data "aws_iam_policy_document" "backup" {}
